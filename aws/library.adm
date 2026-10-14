@@ -1,0 +1,39 @@
+// Amazon Web Services client, one module per service
+@manifest(version = "0.0.1")
+library adm.cloud.aws {
+	use (
+		adm.cloud.aws
+		adm.cloud.aws.s3
+		adm.cloud.aws.sqs
+		adm.cloud.aws.sns
+		adm.cloud.aws.dynamodb
+		adm.cloud.aws.secretsmanager
+		adm.cloud.aws.ssm
+		adm.cloud.aws.sts
+		adm.cloud.aws.ses
+		adm.cloud.aws.lambda
+		adm.cloud.aws.cloudwatch
+		adm.cloud.aws.kms
+		adm.cloud.aws.eventbridge
+		adm.cloud.aws.kinesis
+		adm.cloud.aws.bedrock
+	)
+
+	export (
+		adm.cloud.aws
+		adm.cloud.aws.s3
+		adm.cloud.aws.sqs
+		adm.cloud.aws.sns
+		adm.cloud.aws.dynamodb
+		adm.cloud.aws.secretsmanager
+		adm.cloud.aws.ssm
+		adm.cloud.aws.sts
+		adm.cloud.aws.ses
+		adm.cloud.aws.lambda
+		adm.cloud.aws.cloudwatch
+		adm.cloud.aws.kms
+		adm.cloud.aws.eventbridge
+		adm.cloud.aws.kinesis
+		adm.cloud.aws.bedrock
+	)
+}

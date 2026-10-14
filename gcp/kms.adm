@@ -1,0 +1,3 @@
+partial module adm.cloud.gcp.kms {
+	// Cloud KMS: encrypt, decrypt, sign, verify
+}

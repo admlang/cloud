@@ -1,0 +1,3 @@
+partial module adm.cloud.azure.cosmos {
+	// Cosmos DB for NoSQL: items as typed structs, SQL queries, partitions, change feed
+}

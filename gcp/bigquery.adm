@@ -1,0 +1,3 @@
+partial module adm.cloud.gcp.bigquery {
+	// BigQuery: jobs and queries with typed rows, streaming inserts, datasets and tables
+}

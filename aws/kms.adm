@@ -1,0 +1,3 @@
+partial module adm.cloud.aws.kms {
+	// AWS KMS: encrypt, decrypt, sign, verify, data keys
+}

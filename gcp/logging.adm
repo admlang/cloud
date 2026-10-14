@@ -1,0 +1,3 @@
+partial module adm.cloud.gcp.logging {
+	// Cloud Logging and Monitoring: write entries and time series; a Telemetry exporter
+}

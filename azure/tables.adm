@@ -1,0 +1,3 @@
+partial module adm.cloud.azure.tables {
+	// Table Storage and Cosmos DB tables: entities as typed structs, queries, batches
+}

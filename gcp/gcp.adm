@@ -1,0 +1,3 @@
+partial module adm.cloud.gcp {
+	// Google Cloud shared by every service module: credentials (service account keys as signed JWTs, application default credentials, the metadata server, workload identity federation), OAuth2 scopes and tokens, project and location, retries, pagination, GcpError
+}

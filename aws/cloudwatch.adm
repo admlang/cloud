@@ -1,0 +1,3 @@
+partial module adm.cloud.aws.cloudwatch {
+	// Amazon CloudWatch metrics and logs: put metric data, log groups and streams, queries; a Telemetry exporter
+}

@@ -1,0 +1,3 @@
+partial module adm.cloud.aws.sts {
+	// AWS STS: assume role, web identity, session tokens, caller identity
+}

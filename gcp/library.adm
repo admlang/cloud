@@ -1,0 +1,29 @@
+// Google Cloud client, one module per service
+@manifest(version = "0.0.1")
+library adm.cloud.gcp {
+	use (
+		adm.cloud.gcp
+		adm.cloud.gcp.storage
+		adm.cloud.gcp.pubsub
+		adm.cloud.gcp.firestore
+		adm.cloud.gcp.secretmanager
+		adm.cloud.gcp.bigquery
+		adm.cloud.gcp.tasks
+		adm.cloud.gcp.logging
+		adm.cloud.gcp.kms
+		adm.cloud.gcp.vertex
+	)
+
+	export (
+		adm.cloud.gcp
+		adm.cloud.gcp.storage
+		adm.cloud.gcp.pubsub
+		adm.cloud.gcp.firestore
+		adm.cloud.gcp.secretmanager
+		adm.cloud.gcp.bigquery
+		adm.cloud.gcp.tasks
+		adm.cloud.gcp.logging
+		adm.cloud.gcp.kms
+		adm.cloud.gcp.vertex
+	)
+}

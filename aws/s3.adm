@@ -1,0 +1,3 @@
+partial module adm.cloud.aws.s3 {
+	// Amazon S3 and compatible stores (MinIO, Ceph, Garage, R2, B2); moves here from adm.network.s3
+}

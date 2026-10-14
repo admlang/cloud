@@ -1,0 +1,3 @@
+partial module adm.cloud.cloudflare.ai {
+	// Workers AI: run models by name with streaming; the adm.ai client shape
+}

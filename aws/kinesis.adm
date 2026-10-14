@@ -1,0 +1,3 @@
+partial module adm.cloud.aws.kinesis {
+	// Amazon Kinesis Data Streams: put records, shard iterators, enhanced fan-out
+}

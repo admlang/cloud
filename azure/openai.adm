@@ -1,0 +1,3 @@
+partial module adm.cloud.azure.openai {
+	// Azure OpenAI: the adm.ai.openai client shape with Azure endpoints, deployments and credentials
+}

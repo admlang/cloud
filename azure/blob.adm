@@ -1,0 +1,3 @@
+partial module adm.cloud.azure.blob {
+	// Blob Storage: containers and blobs, block uploads, SAS links, leases, conditions
+}

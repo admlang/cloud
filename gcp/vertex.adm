@@ -1,0 +1,3 @@
+partial module adm.cloud.gcp.vertex {
+	// Vertex AI: Gemini and partner models with Google Cloud credentials; the adm.ai client shape
+}

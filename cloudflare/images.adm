@@ -1,0 +1,3 @@
+partial module adm.cloud.cloudflare.images {
+	// Images: upload, variants, signed delivery URLs
+}

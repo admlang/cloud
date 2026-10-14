@@ -1,0 +1,3 @@
+partial module adm.cloud.aws.bedrock {
+	// Amazon Bedrock runtime: converse and invoke with streaming, embeddings; the adm.ai client shape with AWS credentials
+}

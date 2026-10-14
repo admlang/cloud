@@ -1,0 +1,3 @@
+partial module adm.cloud.gcp.tasks {
+	// Cloud Tasks: queues and HTTP tasks
+}

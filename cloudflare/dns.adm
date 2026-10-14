@@ -1,0 +1,3 @@
+partial module adm.cloud.cloudflare.dns {
+	// DNS records: list, create, update, delete, import and export zones
+}

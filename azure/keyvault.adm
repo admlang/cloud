@@ -1,0 +1,3 @@
+partial module adm.cloud.azure.keyvault {
+	// Key Vault: secrets, keys (encrypt, sign, wrap), certificates
+}

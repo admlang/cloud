@@ -1,0 +1,3 @@
+partial module adm.cloud.gcp.storage {
+	// Cloud Storage: buckets and objects, resumable uploads, signed URLs, conditions, notifications
+}

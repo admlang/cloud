@@ -1,0 +1,3 @@
+partial module adm.cloud.aws.ses {
+	// Amazon SES v2: send mail from std.formats.mail messages, templates, suppression list, event notifications
+}

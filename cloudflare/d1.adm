@@ -1,0 +1,3 @@
+partial module adm.cloud.cloudflare.d1 {
+	// D1 databases: query with bound parameters, batches, exports; a std.data.db driver
+}

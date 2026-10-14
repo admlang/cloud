@@ -1,0 +1,3 @@
+partial module adm.cloud.aws {
+	// AWS shared by every service module: credentials chain (static, environment, shared config files, IMDSv2, container and web identity credentials, assumed roles), Signature Version 4, regions and endpoints, retries, pagination, AwsError
+}

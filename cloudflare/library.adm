@@ -1,0 +1,27 @@
+// Cloudflare API client, one module per product
+@manifest(version = "0.0.1")
+library adm.cloud.cloudflare {
+	use (
+		adm.cloud.cloudflare
+		adm.cloud.cloudflare.dns
+		adm.cloud.cloudflare.kv
+		adm.cloud.cloudflare.d1
+		adm.cloud.cloudflare.queues
+		adm.cloud.cloudflare.workers
+		adm.cloud.cloudflare.images
+		adm.cloud.cloudflare.turnstile
+		adm.cloud.cloudflare.ai
+	)
+
+	export (
+		adm.cloud.cloudflare
+		adm.cloud.cloudflare.dns
+		adm.cloud.cloudflare.kv
+		adm.cloud.cloudflare.d1
+		adm.cloud.cloudflare.queues
+		adm.cloud.cloudflare.workers
+		adm.cloud.cloudflare.images
+		adm.cloud.cloudflare.turnstile
+		adm.cloud.cloudflare.ai
+	)
+}

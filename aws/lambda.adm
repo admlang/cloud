@@ -1,0 +1,3 @@
+partial module adm.cloud.aws.lambda {
+	// AWS Lambda: invoke (sync, async, streaming responses), functions, and the runtime API for functions written in ADM
+}

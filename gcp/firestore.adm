@@ -1,0 +1,3 @@
+partial module adm.cloud.gcp.firestore {
+	// Firestore: documents as typed structs, queries, transactions, batched writes, listeners
+}

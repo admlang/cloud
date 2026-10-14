@@ -1,0 +1,3 @@
+partial module adm.cloud.aws.sqs {
+	// Amazon SQS: queues, send and receive with long polling, batches, visibility, dead-letter queues, FIFO
+}

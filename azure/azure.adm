@@ -1,0 +1,3 @@
+partial module adm.cloud.azure {
+	// Azure shared by every service module: credentials (Entra ID client secret and certificate, managed identity, workload identity, Azure CLI tokens), shared keys and SAS, clouds and endpoints, retries, pagination, AzureError
+}

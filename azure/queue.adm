@@ -1,0 +1,3 @@
+partial module adm.cloud.azure.queue {
+	// Queue Storage: enqueue, dequeue with visibility, peek, update
+}

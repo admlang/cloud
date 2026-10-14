@@ -1,0 +1,3 @@
+partial module adm.cloud.gcp.pubsub {
+	// Pub/Sub: topics, publish with ordering keys, pull and streaming pull subscriptions, acknowledgement deadlines, dead-letter topics
+}

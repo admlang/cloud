@@ -1,0 +1,3 @@
+partial module adm.cloud.aws.eventbridge {
+	// Amazon EventBridge: put events, rules, schedules
+}

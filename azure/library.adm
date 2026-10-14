@@ -1,0 +1,27 @@
+// Microsoft Azure client, one module per service
+@manifest(version = "0.0.1")
+library adm.cloud.azure {
+	use (
+		adm.cloud.azure
+		adm.cloud.azure.blob
+		adm.cloud.azure.queue
+		adm.cloud.azure.tables
+		adm.cloud.azure.servicebus
+		adm.cloud.azure.keyvault
+		adm.cloud.azure.cosmos
+		adm.cloud.azure.monitor
+		adm.cloud.azure.openai
+	)
+
+	export (
+		adm.cloud.azure
+		adm.cloud.azure.blob
+		adm.cloud.azure.queue
+		adm.cloud.azure.tables
+		adm.cloud.azure.servicebus
+		adm.cloud.azure.keyvault
+		adm.cloud.azure.cosmos
+		adm.cloud.azure.monitor
+		adm.cloud.azure.openai
+	)
+}

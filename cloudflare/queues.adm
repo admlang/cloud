@@ -1,0 +1,3 @@
+partial module adm.cloud.cloudflare.queues {
+	// Queues: send and pull messages, acknowledge
+}

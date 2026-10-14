@@ -1,0 +1,3 @@
+partial module adm.cloud.azure.servicebus {
+	// Service Bus over AMQP 1.0: queues, topics and subscriptions, sessions, dead-lettering, scheduled messages
+}

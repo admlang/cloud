@@ -1,0 +1,3 @@
+partial module adm.cloud.azure.monitor {
+	// Azure Monitor: custom metrics and logs ingestion; a Telemetry exporter
+}

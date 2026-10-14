@@ -1,0 +1,3 @@
+partial module adm.cloud.aws.dynamodb {
+	// Amazon DynamoDB: items and typed structs, queries and scans with pagination, batch and transactional writes, streams, tables and indexes
+}

@@ -1,0 +1,3 @@
+partial module adm.cloud.cloudflare.workers {
+	// Workers scripts and versions: upload, deploy, bindings, routes, secrets, tail logs
+}
