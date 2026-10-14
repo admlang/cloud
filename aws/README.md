@@ -4,10 +4,6 @@ An Amazon Web Services client in ADM over `std.net.http`: one module per service
 module that holds credentials, Signature Version 4, regions, endpoints, retries and errors.
 There is no SDK to install.
 
-**Not built yet**, except S3: today's `adm.network.s3` becomes the `adm.cloud.aws.s3` module.
-The library is declared so that its name, modules and scope are fixed; this README is the
-design the code will follow.
-
 ```bash
 adm get admlang:adm.cloud.aws
 ```
@@ -20,14 +16,14 @@ use (
 )
 
 let account = try aws.connect("eu-central-1")        // the credential chain
-let queue = sqs.Client(account).queue("https://sqs.eu-central-1.amazonaws.com/123456789012/jobs")
+let queue = new sqs.Client(account).queue("https://sqs.eu-central-1.amazonaws.com/123456789012/jobs")
 try queue.send("resize 7.png", delay = 10s)
 for let m in try queue.receive(10, wait = 20s) {
 	print(m.body)
 	try m.delete()
 }
 
-let secrets = secretsmanager.Client(account)
+let secrets = new secretsmanager.Client(account)
 let dbPassword = try secrets.get("prod/db/password")  // Secret<string>
 ```
 
@@ -66,12 +62,6 @@ URLs), retried on throttling and 5xx answers with backoff and a request limit, a
 | `eventbridge` | put events, rules and targets, schedules |
 | `kinesis` | put records, shard iterators, enhanced fan-out consumers |
 | `bedrock` | the runtime: converse and invoke with streaming, embeddings; the same client shape as the `adm.ai` libraries |
-
-## Builds on
-
-`std.net.http`, `std.crypto` (HMAC-SHA256 signing, KMS envelopes), `std.data.encoding` (JSON,
-XML for S3 and SQS, CBOR where a service offers it), `std.formats.mail` for SES,
-`std.services.telemetry` for the CloudWatch exporter.
 
 ## Tests
 

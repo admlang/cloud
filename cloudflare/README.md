@@ -3,9 +3,6 @@
 A Cloudflare API client in ADM over `std.net.http`: one module per product, and a root module
 that holds API tokens, accounts and zones, the v4 API envelope, pagination, retries and errors.
 
-**Not built yet.** The library is declared so that its name, modules and scope are fixed; this
-README is the design the code will follow.
-
 ```bash
 adm get admlang:adm.cloud.cloudflare
 ```
@@ -18,12 +15,12 @@ use (
 )
 
 let cf = try cloudflare.connect(token)               // CLOUDFLARE_API_TOKEN when left out
-let settings = kv.Client(cf.account("0123abcd")).namespace("settings")
+let settings = new kv.Client(cf.account("0123abcd")).namespace("settings")
 try settings.put("theme", "dark", expire = 7d)
 let theme = try settings.get("theme")                // ?string
 
 let zone = try cf.zone("example.com")
-try dns.Client(zone).create("A", "www", "203.0.113.7", proxied = true)
+try new dns.Client(zone).create("A", "www", "203.0.113.7", proxied = true)
 ```
 
 ## Tokens and scoping
@@ -49,11 +46,6 @@ library adds nothing for it.
 | `images` | upload by file or URL, variants, signed delivery URLs, direct creator upload |
 | `turnstile` | server-side verification of a widget response (siteverify), with idempotency keys |
 | `ai` | Workers AI: run text, embedding, image and speech models by name, with streaming; the same client shape as the `adm.ai` libraries |
-
-## Builds on
-
-`std.net.http` (client, WebSocket for Worker tails), `std.data.encoding` (JSON), `std.data.db`
-for the D1 driver, `std.ai.llm` message types for Workers AI.
 
 ## Tests
 

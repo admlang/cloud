@@ -35,15 +35,6 @@ named after the service's operations, typed requests and results, `all()` on eve
 listing, and structs mapped onto the service's records where it keeps them (DynamoDB items,
 Firestore documents, Cosmos items, Table entities).
 
-Module names are the contract. Should a library grow too large to compile as one, it splits
-into libraries of the same module names, and a program changes only its dependency list.
-
-## Status
-
-Nothing is built yet except S3, which exists today as `adm.network.s3` and moves here as
-`adm.cloud.aws.s3`. Each library is declared so that its name, modules and scope are fixed, and
-its README is the design the code will follow.
-
 ## Tests
 
 Each suite runs against a loopback server that answers as the cloud does, so `adm test` needs

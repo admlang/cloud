@@ -4,9 +4,6 @@ A Google Cloud client in ADM over `std.net.http`: one module per service, and a 
 holds credentials, OAuth2 tokens, projects and locations, retries and errors. There is no SDK to
 install.
 
-**Not built yet.** The library is declared so that its name, modules and scope are fixed; this
-README is the design the code will follow.
-
 ```bash
 adm get admlang:adm.cloud.gcp
 ```
@@ -19,10 +16,10 @@ use (
 )
 
 let project = try gcp.connect("my-project")          // application default credentials
-let photos = storage.Client(project).bucket("photos")
+let photos = new storage.Client(project).bucket("photos")
 try photos.put("2026/cat.jpg", pixels, "image/jpeg")
 
-let topic = pubsub.Client(project).topic("orders")
+let topic = new pubsub.Client(project).topic("orders")
 try topic.publish("order 7 paid", orderingKey = "7")
 ```
 
@@ -51,12 +48,6 @@ Every request is retried on `429`, `502`, `503` and `504` answers with backoff, 
 | `logging` | write log entries and custom metrics to Cloud Logging and Monitoring; an exporter for the Telemetry service |
 | `kms` | encrypt, decrypt, sign, verify, key rings and versions |
 | `vertex` | Gemini and partner models with Google Cloud credentials: the same client shape as the `adm.ai` libraries |
-
-## Builds on
-
-`std.net.http`, `std.proto.auth.jose` (service account JWTs), `std.proto.auth.oauth2`,
-`std.crypto`, `std.data.encoding` (JSON), `std.net.grpc` where a service is better served by
-gRPC, `std.services.telemetry` for the logging exporter.
 
 ## Tests
 

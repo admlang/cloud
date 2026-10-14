@@ -4,9 +4,6 @@ A Microsoft Azure client in ADM over `std.net.http`: one module per service, and
 that holds credentials, shared keys and SAS, clouds and endpoints, retries and errors. There is
 no SDK to install.
 
-**Not built yet.** The library is declared so that its name, modules and scope are fixed; this
-README is the design the code will follow.
-
 ```bash
 adm get admlang:adm.cloud.azure
 ```
@@ -19,11 +16,11 @@ use (
 )
 
 let account = try azure.connect()                    // the credential chain
-let photos = blob.Client(account, "mystorage").container("photos")
+let photos = new blob.Client(account, "mystorage").container("photos")
 try photos.upload("2026/cat.jpg", pixels, "image/jpeg")
 let link = try photos.sasURL("2026/cat.jpg", 1h)
 
-let vault = keyvault.Client(account, "https://myvault.vault.azure.net")
+let vault = new keyvault.Client(account, "https://myvault.vault.azure.net")
 let dbPassword = try vault.secret("db-password")     // Secret<string>
 ```
 
@@ -51,13 +48,6 @@ Every request is retried on throttling and 5xx answers with backoff, and fails w
 | `cosmos` | Cosmos DB for NoSQL: items as typed structs, SQL queries with partition keys, transactional batches, the change feed |
 | `monitor` | custom metrics and the Logs Ingestion API; an exporter for the Telemetry service |
 | `openai` | Azure OpenAI: the `adm.ai.openai` client shape with Azure endpoints, deployments and Entra ID or key credentials |
-
-## Builds on
-
-`std.net.http`, `std.proto.auth.oauth2` and `std.proto.auth.jose` (Entra ID tokens, certificate
-credentials), `std.crypto` (shared key signing), `std.data.encoding` (JSON, XML for the storage
-services), `std.net.tcp` and `std.net.tls` for AMQP 1.0, `std.services.telemetry` for the
-monitor exporter.
 
 ## Tests
 
